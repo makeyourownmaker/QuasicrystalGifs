@@ -23,13 +23,17 @@ def main(args):
     xv, yv = np.meshgrid(d, d)
 
     # Apply log-polar transformation
-    theta  = np.arctan2(yv, xv)
-    r      = np.log(np.sqrt(xv * xv + yv * yv))
-    r[np.isinf(r) is True] = 0
-
-    tcos   = theta * np.cos(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
-    rsin   = r * np.sin(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
-    inner  = (tcos - rsin) * stripes
+    if args.log_polar:
+        theta  = np.arctan2(yv, xv)
+        r      = np.log(np.sqrt(xv * xv + yv * yv))
+        r[np.isinf(r) is True] = 0
+        tcos   = theta * np.cos(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
+        rsin   = r * np.sin(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
+        inner  = (tcos - rsin) * stripes
+    else:
+        xcos = xv * np.cos(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
+        ysin = yv * np.sin(np.arange(0, pi, pi / k))[:, np.newaxis, np.newaxis]
+        inner = (xcos + ysin) * 2 * pi * stripes / N
 
     # Rotation angles for waves to be summed
     cinner = np.cos(inner)
@@ -48,11 +52,8 @@ def main(args):
                                    interval=args.delay
                                    )
 
-    if not os.path.exists(args.filename) or os.stat(args.filename).st_size == 0:
-        anim.save(args.filename, writer='imagemagick')
-        # If writer='imagemagick' option is removed then ffmpeg is used which creates bigger gif
-    else:
-        print("ERROR: File (%s) exists!" % args.filename)
+    anim.save(args.filename, writer='imagemagick')
+    # If writer='imagemagick' option is removed then ffmpeg is used which creates bigger gif
 
     return 0
 
@@ -81,7 +82,7 @@ if __name__ == '__main__':
             help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=PiYG',
             default='PiYG', type=str,
             choices=['Greys', 'PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu', 'RdYlBu', 'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic'])
-    optional.add_argument('-lp', '--log-polar',
+    optional.add_argument('-lp', '--log_polar',
             help='Turn on log-polar transform - default=off',
             default=False, action='store_true')
     optional.add_argument('-fn', '--filename',
@@ -92,11 +93,18 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if not args.filename.endswith('.gif'):
-        print("ERROR: filename (%s) does not end with gif" % args.filename)
+        print("ERROR: filename (%s) does not end with .gif" % args.filename)
+        print("Add .gif to end of -fn/--filename option")
         exit()
 
     if '/' in args.filename:
-        print("ERROR: filename (%s) should not be in a sub-directory" % args.filename)
+        print("ERROR: filename (%s) should not contain sub-directories" % args.filename)
+        print("Replace directory paths with filenames in current working directory -fn/--filename option")
+        exit()
+
+    if os.path.exists(args.filename):
+        print("ERROR: filename (%s) already exists!" % args.filename)
+        print("Check file and remove it OR modify -fn/--filename option")
         exit()
 
     main(args)
