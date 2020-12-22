@@ -79,7 +79,8 @@ if __name__ == '__main__':
             default=512, type=int, metavar="[64, 4096]", choices=range(64, 4096))
     optional.add_argument('-cm', '--colormap',
             help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=PiYG',
-            default='PiYG', type=str, choices=['PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu', 'RdYlBu', 'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic'])
+            default='PiYG', type=str,
+            choices=['Greys', 'PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu', 'RdYlBu', 'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic'])
     optional.add_argument('-lp', '--log-polar',
             help='Turn on log-polar transform - default=off',
             default=False, action='store_true')
