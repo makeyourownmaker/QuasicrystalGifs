@@ -132,6 +132,16 @@ the [ImageMagick convert](https://imagemagick.org/script/convert.php) utility.
 This involves a surprisingly large amount of data transfer.  See this 
 [stackoverflow answer for more details](https://stackoverflow.com/a/30704560/100129).
 
+If you start having time or memory problems converting animations to gifs
+then try using a black and white or greyscale colormap:
+```sh
+# Short options
+python quasicrystals.py -cm Greys
+
+# Long options
+python quasicrystals.py --colormap Greys
+```
+
 
 ## Gallery
 
@@ -148,12 +158,13 @@ python quasicrystals.py --log_polar
 
 ## Roadmap
 
- * Create requirements.txt file
+ * Create requirements.txt file:
    * Add requirements.txt usage to README
 
  * quasicrystals.py:
    * Simplify handling of log-polar transformation
    * Add more colormaps
+     * Particularly simple black and white color map
    * Allow specifying width and height of images
    * Include option to indicate direction of rotation
      * Currently defaults to anti-clockwise
