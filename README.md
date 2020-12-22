@@ -12,7 +12,7 @@ If you like the quasicrystal scripts/notebooks, fork the repository and contribu
 
 ## Usage
 
-Assuming you have python in your path:
+Assuming you have python in your path and all dependencies installed:
 ```sh
 python quasicrystal.py
 ```
