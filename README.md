@@ -51,8 +51,8 @@ Requires:
  * [numpy](https://numpy.org/)
  * [matplotlib](https://matplotlib.org/)
  * [ImageMagick](https://imagemagick.org/)
-[//]: # " * [Jupyter](https://jupyter.org/) "
 
+[//]: # " * [Jupyter](https://jupyter.org/) "
 [//]: # " One option is to clone the repository and open the notebook(s) in a local "
 [//]: # " installation of Jupyter. "
 [//]: # " ```sh "
@@ -60,7 +60,6 @@ Requires:
 [//]: # " cd QuasicrystalGifs "
 [//]: # " jupyter notebook ... "
 [//]: # " ``` "
-
 [//]: # " Another option is to run the notebook(s) on NBViewer, MyBinder or Colab. "
 
 
