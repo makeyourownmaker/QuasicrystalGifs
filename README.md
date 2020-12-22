@@ -34,7 +34,7 @@ settings:
 | Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG    |
 | Filename   | -fn   | --filename   | Filename for animation                          | qc.gif  |
 
-The filename must use the gif file extension and should not use sub-directories.
+The filename must use the gif file extension and should not use any sub-directories.
 
 A colormap is a matrix of values that define the colors for graphics objects.
 Here is a list of 
@@ -47,7 +47,7 @@ each command line option.
 ## Installation
 
 Requires:
- * Recent version of [python](https://www.python.org/)
+ * Recent version of [python 3](https://www.python.org/)
  * [numpy](https://numpy.org/)
  * [matplotlib](https://matplotlib.org/)
  * [ImageMagick](https://imagemagick.org/)
@@ -67,8 +67,10 @@ After the above dependencies have been installed simply download and run the scr
 ```sh
 wget https://raw.githubusercontent.com/makeyourownmaker/QuasicrystalGifs/master/quasicrystals.py
 python quasicrystals.py
+```
 
-# alternatively
+Alternatively, clone the repository and run the script:
+```sh
 git clone https://github.com/makeyourownmaker/QuasicrystalGifs
 cd QuasicrystalGifs
 python quasicrystals.py
@@ -91,8 +93,7 @@ A unit cell is the smallest group of atoms which has the overall symmetry of
 a crystal.  A quasiperiodic structure is periodic on a small scale but 
 unpredictable at some larger scale.
 
-If it helps, you can think of quasicrystals as the 3 dimensional
-generalisation of a 
+Quasicrystals can be thought of as the 3 dimensional generalisation of a
 [Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling).
 
 
@@ -100,7 +101,7 @@ generalisation of a
 
 Each frame of the animation is a summation of waves at evenly-spaced 
 rotations.  That is, every point in each animation frame is colored according 
-to the sum of sins and cosines depending on the x and y coordinates.  The 
+to the sum of sines and cosines depending on the x and y coordinates.  The
 animation is determined by an evenly-spaced orientation angle between 0 and 
 2 * pi.
 
@@ -119,7 +120,7 @@ Al_63 Cu_24 Fe_13 and was discovered in a meteorite by
 [Luca Bindii](https://en.wikipedia.org/wiki/Luca_Bindi) and 
 [Paul J. Steinhardt](https://en.wikipedia.org/wiki/Paul_Steinhardt).
 
-Hundreds of quasicrystals have been confirmed. They are often found in 
+Hundreds of quasicrystals have been confirmed.  They are often found in
 aluminium alloys.
 
 
@@ -133,24 +134,24 @@ This involves a surprisingly large amount of data transfer.  See this
 
 ## Roadmap
 
+ * Create requirements.txt file
+   * Add requirements.txt usage to README
+
  * quasicrystals.py:
    * Make log-polar transform optional
-   * That is, use Cartesian coordinates by default
+     * That is, use Cartesian coordinates by default
    * Add more colormaps
    * Allow specifying width and height of images
+   * Add support for sub-directories in filename option
+     * Error out early if sub-directory does not exist
 
- * Add notebook(s):
+ * Add Jupyter notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
 
  * Expand README:
    * Add examples gallery
    * Describe log-polar transform
-   * Describe rotational and translation symmetry for quasicrystals
-
-
-## Contributing
-
-Pull requests are welcome.  For major changes, please open an issue first to discuss what you would like to change.
+   * Describe rotational and translation symmetry of quasicrystals
 
 
 ## Alternatives
@@ -182,6 +183,11 @@ is editable in the browser.
 [The Second Kind of Impossible by Paul Steinhardt](https://www.amazon.co.uk/Second-Kind-Impossible-Extraordinary-Matter/dp/147672993X/)
 describes the authors adventures searching for quasicrystals from meteorites
 in Siberia while dodging KGB agents and much more.
+
+
+## Contributing
+
+Pull requests are welcome.  For major changes, please open an issue first to discuss what you would like to change.
 
 
 ## License
