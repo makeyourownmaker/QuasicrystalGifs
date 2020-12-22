@@ -24,15 +24,15 @@ Here is the generated gif:
 The above command will generate an animated gif called qc.gif with the following default
 settings:
 
-| Name       | Short | Long         | Description                                        | Default |
-|------------|-------|--------------|----------------------------------------------------|---------|
-| Waves      | -wa   | --waves      | Number of plane waves                              | 5       |
-| Stripes    | -st   | --stripes    | Number of stripes (or periods) per wave            | 37      |
-| Iterations | -it   | --iterations | Number of frames in animation                      | 30      |
-| Delay      | -de   | --delay      | Number of microseconds between frames in animation | 8       |
-| Resolution | -rs   | --resolution | Image size in pixels                               | 512     |
-| Colormap   | -cm   | --colormap   | Colormap from matplotlib                           | PiYG    |
-| Filename   | -fn   | --filename   | Filename for animation                             | qc.gif  |
+| Name       | Short | Long         | Description                                     | Default |
+|------------|-------|--------------|-------------------------------------------------|---------|
+| Waves      | -wa   | --waves      | Number of plane waves                           | 5       |
+| Stripes    | -st   | --stripes    | Number of stripes (or periods) per wave         | 37      |
+| Iterations | -it   | --iterations | Number of frames in animation                   | 30      |
+| Delay      | -de   | --delay      | Number of microseconds between animation frames | 8       |
+| Resolution | -rs   | --resolution | Image size in pixels                            | 512     |
+| Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG    |
+| Filename   | -fn   | --filename   | Filename for animation                          | qc.gif  |
 
 The filename must use the gif file extension and should not use sub-directories.
 
@@ -137,6 +137,7 @@ This involves a surprisingly large amount of data transfer.  See this
    * Make log-polar transform optional
    * That is, use Cartesian coordinates by default
    * Add more colormaps
+   * Allow specifying width and height of images
 
  * Add notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
