@@ -63,7 +63,7 @@ Requires:
 [//]: # " Another option is to run the notebook(s) on NBViewer, MyBinder or Colab. "
 
 
-To install simply download and run the script:
+After the above dependencies have been installed simply download and run the script:
 ```sh
 wget https://raw.githubusercontent.com/makeyourownmaker/QuasicrystalGifs/master/quasicrystals.py
 python quasicrystals.py
