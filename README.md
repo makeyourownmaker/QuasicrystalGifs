@@ -24,15 +24,16 @@ Here is the generated gif:
 The above command will generate an animated gif called qc.gif with the following default
 settings:
 
-| Name       | Short | Long         | Description                                     | Default |
-|------------|-------|--------------|-------------------------------------------------|---------|
-| Waves      | -wa   | --waves      | Number of plane waves                           | 5       |
-| Stripes    | -st   | --stripes    | Number of stripes (or periods) per wave         | 37      |
-| Iterations | -it   | --iterations | Number of frames in animation                   | 30      |
-| Delay      | -de   | --delay      | Number of microseconds between animation frames | 8       |
-| Resolution | -rs   | --resolution | Image size in pixels                            | 512     |
-| Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG    |
-| Filename   | -fn   | --filename   | Filename for animation                          | qc.gif  |
+| Name       | Short | Long         | Description                                     | Default   |
+|------------|-------|--------------|-------------------------------------------------|-----------|
+| Waves      | -wa   | --waves      | Number of plane waves                           | 5         |
+| Stripes    | -st   | --stripes    | Number of stripes (or periods) per wave         | 37        |
+| Iterations | -it   | --iterations | Number of frames in animation                   | 30        |
+| Delay      | -de   | --delay      | Number of microseconds between animation frames | 8         |
+| Resolution | -rs   | --resolution | Image size in pixels                            | 512       |
+| Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG      |
+| Log-polar  | -lp   | --log_polar  | Use log-polar coordinates instead of Cartesian  | Cartesian |
+| Filename   | -fn   | --filename   | Filename for animation                          | qc.gif    |
 
 The filename must use the gif file extension and should not use any sub-directories.
 
@@ -132,25 +133,38 @@ This involves a surprisingly large amount of data transfer.  See this
 [stackoverflow answer for more details](https://stackoverflow.com/a/30704560/100129).
 
 
+## Gallery
+
+Log-polar coordinates with default settings (see table above):
+```sh
+# Short options
+python quasicrystals.py -lp
+
+# Long options
+python quasicrystals.py --log_polar
+```
+<img src="figures/qc_log_polar.gif" align="center" />
+
+
 ## Roadmap
 
  * Create requirements.txt file
    * Add requirements.txt usage to README
 
  * quasicrystals.py:
-   * Make log-polar transform optional
-     * That is, use Cartesian coordinates by default
+   * Simplify handling of log-polar transformation
    * Add more colormaps
    * Allow specifying width and height of images
-   * Add support for sub-directories in filename option
-     * Error out early if sub-directory does not exist
+   * Include option to indicate direction of rotation
+     * Currently defaults to anti-clockwise
 
  * Add Jupyter notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
 
  * Expand README:
-   * Add examples gallery
-   * Describe log-polar transform
+   * Add more examples to gallery
+     * List command line arguments used for each animation
+   * Describe log-polar transform instead of using Cartesian coordinates
    * Describe rotational and translation symmetry of quasicrystals
 
 
