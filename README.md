@@ -14,7 +14,7 @@ If you like the quasicrystal scripts/notebooks, fork the repository and contribu
 
 Assuming you have python in your path and all dependencies installed:
 ```sh
-python quasicrystal.py
+python quasicrystals.py
 ```
 
 Here is the generated gif:
@@ -40,7 +40,7 @@ A colormap is a matrix of values that define the colors for graphics objects.
 Here is a list of 
 [matplotlib colormaps](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html).
 
-Try the -h or --help options for further details like acceptable values for 
+Check the -h or --help options for further details like acceptable values for 
 each command line option.
 
 
@@ -66,11 +66,12 @@ Requires:
 To install simply download and run the script:
 ```sh
 wget https://raw.githubusercontent.com/makeyourownmaker/QuasicrystalGifs/master/quasicrystals.py
+python quasicrystals.py
 
 # alternatively
 git clone https://github.com/makeyourownmaker/QuasicrystalGifs
 cd QuasicrystalGifs
-python quasicrystal.py
+python quasicrystals.py
 ```
 
 
@@ -135,6 +136,7 @@ This involves a surprisingly large amount of data transfer.  See this
  * quasicrystals.py:
    * Make log-polar transform optional
    * That is, use Cartesian coordinates by default
+   * Add more colormaps
 
  * Add notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
@@ -159,18 +161,17 @@ is the earliest implementation I've been able to find.  In Haskell.
 This time in Java.  Requires post-processing with the convert tool from 
 ImageMagick to produce animated gifs.
 
+[Andrew Horchler's Matlab implementation](https://github.com/horchler/quasicrystal)
+will produce animated gifs or movies.
+
 [Mads Ohm Larsen's python gist](https://gist.github.com/omegahm/e823a68c201406d32a94)
 which also requires ImageMagick post-processing.
 
-[Trevahok's ](https://github.com/Trevahok/quasicrystal-generator)
-is another python implementation but with no external dependencies which means
-static images.
+[Trevahok's python implementation](https://github.com/Trevahok/quasicrystal-generator)
+has no external dependencies.  Generates static images.
 
 [Mike Bostock's Javascript and WebGL implementation](https://observablehq.com/@mbostock/quasicrystals)
 is editable in the browser.
-
-[Andrew Horchler's Matlab implementation](https://github.com/horchler/quasicrystal)
-will produce animated gifs or movies.
 
 
 ## See Also
