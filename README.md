@@ -186,7 +186,7 @@ is the earliest implementation I've been able to find.  In Haskell.
 
 [Another early implementation](http://wealoneonearth.blogspot.com/search/label/quasicrystal).
 This time in Java.  Requires post-processing with the convert tool from 
-ImageMagick to produce animated gifs.
+ImageMagick to produce animated gifs.  Code is readable but not vectorised.
 
 [Andrew Horchler's Matlab implementation](https://github.com/horchler/quasicrystal)
 will produce animated gifs or movies.
@@ -195,7 +195,8 @@ will produce animated gifs or movies.
 which also requires ImageMagick post-processing.
 
 [Trevahok's python implementation](https://github.com/Trevahok/quasicrystal-generator)
-has no external dependencies.  Generates static images.
+has no external dependencies.  Generates static greyscale images but code is
+short and very readable.
 
 [Mike Bostock's Javascript and WebGL implementation](https://observablehq.com/@mbostock/quasicrystals)
 is editable in the browser.
