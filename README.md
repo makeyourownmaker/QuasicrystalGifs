@@ -38,8 +38,9 @@ settings:
 The filename must use the gif file extension and should not use any sub-directories.
 
 A colormap is a matrix of values that define the colors for graphics objects.
-Here is a list of 
-[matplotlib colormaps](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html).
+All the matplotlib colormaps are supported but I've not tested all of them.
+Here is a list of the
+[matplotlib version 3.1.0 colormaps](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html).
 
 Check the -h or --help options for further details like acceptable values for 
 each command line option.
@@ -174,7 +175,7 @@ python quasicrystals.py --log_polar
    * Add more examples to gallery
      * List command line arguments used for each animation
    * Describe log-polar transform instead of using Cartesian coordinates
-   * Describe rotational and translation symmetry of quasicrystals
+   * Describe rotational and translational symmetry of quasicrystals
 
 
 ## Alternatives
