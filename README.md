@@ -163,8 +163,6 @@ python quasicrystals.py --log_polar
 
  * quasicrystals.py:
    * Simplify handling of log-polar transformation
-   * Add more colormaps
-     * Particularly simple black and white color map
    * Allow specifying width and height of images
    * Include option to indicate direction of rotation
      * Currently defaults to anti-clockwise
