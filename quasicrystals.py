@@ -81,7 +81,7 @@ if __name__ == '__main__':
     optional.add_argument('-cm', '--colormap',
             help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=PiYG',
             default='PiYG', type=str,
-            choices=['Greys', 'PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu', 'RdYlBu', 'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic'])
+            choices=plt.colormaps())
     optional.add_argument('-lp', '--log_polar',
             help='Turn on log-polar transform - default=off',
             default=False, action='store_true')
