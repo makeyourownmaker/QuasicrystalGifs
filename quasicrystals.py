@@ -97,14 +97,13 @@ if __name__ == '__main__':
         print("Add .gif to end of -fn/--filename option")
         exit()
 
-    if '/' in args.filename:
-        print("ERROR: filename (%s) should not contain sub-directories" % args.filename)
-        print("Replace directory paths with filenames in current working directory -fn/--filename option")
-        exit()
-
     if os.path.exists(args.filename):
         print("ERROR: filename (%s) already exists!" % args.filename)
         print("Check file and remove it OR modify -fn/--filename option")
         exit()
+
+    folder = os.path.dirname(args.filename) or None
+    if folder is not None and not os.path.isdir(folder):
+        os.mkdir(folder)
 
     main(args)
