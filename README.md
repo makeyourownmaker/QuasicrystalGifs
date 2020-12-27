@@ -152,10 +152,21 @@ If you start having time or memory problems converting animations to gifs
 then try using a black and white or greyscale colormap:
 ```sh
 # Short options
-python quasicrystals.py -fn qc.gif -cm Greys
+python quasicrystals.py -fn qc.gif -cm binary
 
 # Long options
-python quasicrystals.py --filename qc.gif --colormap Greys
+python quasicrystals.py --filename qc.gif --colormap binary
+```
+Other black and white/greyscale colormaps include: binary, gist_yarg, gist_gray,
+gray and Greys.
+
+Reducing the resolution is also helpful:
+```sh
+# Short options
+python quasicrystals.py -fn qc.gif -cm binary -rs 400
+
+# Long options
+python quasicrystals.py --filename qc.gif --colormap binary -rs 400
 ```
 
 
@@ -170,6 +181,16 @@ python quasicrystals.py -fn qc.gif -lp
 python quasicrystals.py --filename qc.gif --log_polar
 ```
 <img src="figures/qc_log_polar.gif" align="center" />
+
+```sh
+python quasicrystals.py -wa 7 -st 128 -rs 800 -cm spectral -fn wa_7_st_128_rs_800_cm_spectral.gif
+```
+<img src="figures/wa_7_st_128_rs_800_cm_spectral.gif" align="center" />
+
+```sh
+python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_hsv.gif
+```
+<img src="figures/wa_7_st_128_rs_800_cm_hsv.gif" align="center" />
 
 
 ## Roadmap
