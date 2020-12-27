@@ -23,7 +23,7 @@ def main(args):
 
     image  = np.empty((N, N))
     phases = np.arange(0, 2 * pi, 2 * pi / ite)
-    d = np.arange(-N / 2, N / 2, dtype=np.float64)
+    d = np.arange(-N / 2, N / 2, dtype=np.float64)  # origin at the image center
     xv, yv = np.meshgrid(d, d)
 
     # Apply log-polar transformation
@@ -93,10 +93,10 @@ if __name__ == '__main__':
     optional = parser._action_groups.pop()
     optional.add_argument('-wa', '--waves',
             help='Number of plane waves - default=5',
-            default=5, type=int, metavar="[2, 50]", choices=range(2, 51))
+            default=5, type=int, metavar="[2, 50]", choices=range(2, 151))
     optional.add_argument('-st', '--stripes',
             help='Number of stripes per wave - default=37',
-            default=37, type=int, metavar="[2, 50]", choices=range(2, 51))
+            default=37, type=int, metavar="[2, 150]", choices=range(2, 151))
     optional.add_argument('-rs', '--resolution',
             help='Image size in pixels - default=512',
             default=512, type=int, metavar="[64, 4096]", choices=range(64, 4096))
