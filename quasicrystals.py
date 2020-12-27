@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
+import time
 import argparse
+import threading
 import numpy as np
 from math import pi
+from itertools import cycle
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -52,15 +56,39 @@ def main(args):
                                    interval=args.delay
                                    )
 
+    def progress():
+        for c in cycle(['|', '/', '-', '\\']):
+            if done:
+                break
+            sys.stdout.write('\rSaving animation: ' + c)
+            sys.stdout.flush()
+            time.sleep(0.1)
+
+    if args.quiet is False:
+        done = False
+        t = threading.Thread(target=progress)
+        t.daemon = True  # allow keyboard interrupts
+        t.start()
+
     anim.save(args.filename, writer='imagemagick')
     # If writer='imagemagick' option is removed then ffmpeg is used which creates bigger gif
 
-    return 0
+    if args.quiet is False:
+        time.sleep(2)
+        done = True
+        sys.stdout.write('\rSaving animation: Done!     \n')
+        sys.stdout.flush()
+
+    sys.exit(0)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-            description="Generate animated gifs of quasicrystals using sum of plane waves")
+            description="Generate animated gifs of quasicrystals using sum of plane waves https://github.com/makeyourownmaker/QuasicrystalGifs")
+
+    required = parser.add_argument_group('required arguments')
+    required.add_argument('-fn', '--filename',
+            help='Filename for animation', type=str, required=True)
 
     optional = parser._action_groups.pop()
     optional.add_argument('-wa', '--waves',
@@ -69,38 +97,40 @@ if __name__ == '__main__':
     optional.add_argument('-st', '--stripes',
             help='Number of stripes per wave - default=37',
             default=37, type=int, metavar="[2, 50]", choices=range(2, 51))
+    optional.add_argument('-rs', '--resolution',
+            help='Image size in pixels - default=512',
+            default=512, type=int, metavar="[64, 4096]", choices=range(64, 4096))
     optional.add_argument('-it', '--iterations',
             help='Number of frames in animation - default=30',
             default=30, type=int, metavar="[1, 120]", choices=range(1, 120))
     optional.add_argument('-de', '--delay',
             help='Number of microseconds between animation frames - default=8',
             default=8, type=int, metavar="[1, 100]", choices=range(1, 100))
-    optional.add_argument('-rs', '--resolution',
-            help='Image size in pixels - default=512',
-            default=512, type=int, metavar="[64, 4096]", choices=range(64, 4096))
+    optional.add_argument('-lp', '--log_polar',
+            help='Turn on log-polar transform - default=off',
+            default=False, action='store_true')
     optional.add_argument('-cm', '--colormap',
             help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=PiYG',
             default='PiYG', type=str,
             choices=plt.colormaps())
-    optional.add_argument('-lp', '--log_polar',
-            help='Turn on log-polar transform - default=off',
+    optional.add_argument('-q', '--quiet',
+            help='Turn off messages - default=on',
             default=False, action='store_true')
-    optional.add_argument('-fn', '--filename',
-            help='Filename for animation - default=qc.gif',
-            default='qc.gif', type=str)
 
     parser._action_groups.append(optional)
     args = parser.parse_args()
 
     if not args.filename.endswith('.gif'):
-        print("ERROR: filename (%s) does not end with .gif" % args.filename)
+        print("\nERROR: filename (%s) does not end with .gif" % args.filename)
         print("Add .gif to end of -fn/--filename option")
-        exit()
+        print("https://github.com/makeyourownmaker/QuasicrystalGifs")
+        sys.exit(1)
 
     if os.path.exists(args.filename):
-        print("ERROR: filename (%s) already exists!" % args.filename)
+        print("\nERROR: filename (%s) already exists!" % args.filename)
         print("Check file and remove it OR modify -fn/--filename option")
-        exit()
+        print("https://github.com/makeyourownmaker/QuasicrystalGifs")
+        sys.exit(1)
 
     folder = os.path.dirname(args.filename) or None
     if folder is not None and not os.path.isdir(folder):
