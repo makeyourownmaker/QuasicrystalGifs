@@ -14,7 +14,7 @@ If you like the quasicrystal scripts/notebooks, fork the repository and contribu
 
 Assuming you have python in your path and all dependencies installed:
 ```sh
-python quasicrystals.py
+python quasicrystals.py -fn qc.fig
 ```
 
 Here is the generated gif:
@@ -33,14 +33,27 @@ settings:
 | Resolution | -rs   | --resolution | Image size in pixels                            | 512       |
 | Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG      |
 | Log-polar  | -lp   | --log_polar  | Use log-polar coordinates instead of Cartesian  | Cartesian |
-| Filename   | -fn   | --filename   | Filename for animation                          | qc.gif    |
 
-The filename must use the gif file extension and should not use any sub-directories.
+All of the above arguments are optional.
 
 A colormap is a matrix of values that define the colors for graphics objects.
 All the matplotlib colormaps are supported but I've not tested all of them.
 Here is a list of the
-[matplotlib version 3.1.0 colormaps](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html).
+[matplotlib version 3.3.3 colormaps](https://matplotlib.org/3.3.3/tutorials/colors/colormaps.html).
+
+The only required argument is -fn or --filename.
+
+| Name       | Short | Long         | Description                                     |
+|------------|-------|--------------|-------------------------------------------------|
+| Filename   | -fn   | --filename   | Filename for animation                          |
+
+The filename must use the gif file extension and should not use any sub-directories.
+
+There is one more optional argument:
+
+| Name  | Short | Long    | Description       | Default |
+|-------|-------|---------|-------------------|---------|
+| Quiet | -q    | --quiet | Turn off messages | False   |
 
 Check the -h or --help options for further details like acceptable values for 
 each command line option.
@@ -68,14 +81,14 @@ Requires:
 After the above dependencies have been installed simply download and run the script:
 ```sh
 wget https://raw.githubusercontent.com/makeyourownmaker/QuasicrystalGifs/master/quasicrystals.py
-python quasicrystals.py
+python quasicrystals.py -fn qc.gif
 ```
 
 Alternatively, clone the repository and run the script:
 ```sh
 git clone https://github.com/makeyourownmaker/QuasicrystalGifs
 cd QuasicrystalGifs
-python quasicrystals.py
+python quasicrystals.py -fn qc.gif
 ```
 
 
@@ -132,15 +145,17 @@ The bottleneck in generating the animated gifs is the final step using
 the [ImageMagick convert](https://imagemagick.org/script/convert.php) utility.  
 This involves a surprisingly large amount of data transfer.  See this 
 [stackoverflow answer for more details](https://stackoverflow.com/a/30704560/100129).
+The -q or --quiet option will disable the Saving animation progress animation
+and reduce runtime a little.
 
 If you start having time or memory problems converting animations to gifs
 then try using a black and white or greyscale colormap:
 ```sh
 # Short options
-python quasicrystals.py -cm Greys
+python quasicrystals.py -fn qc.gif -cm Greys
 
 # Long options
-python quasicrystals.py --colormap Greys
+python quasicrystals.py --filename qc.gif --colormap Greys
 ```
 
 
@@ -149,10 +164,10 @@ python quasicrystals.py --colormap Greys
 Log-polar coordinates with default settings (see table above):
 ```sh
 # Short options
-python quasicrystals.py -lp
+python quasicrystals.py -fn qc.gif -lp
 
 # Long options
-python quasicrystals.py --log_polar
+python quasicrystals.py --filename qc.gif --log_polar
 ```
 <img src="figures/qc_log_polar.gif" align="center" />
 
