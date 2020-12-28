@@ -93,7 +93,7 @@ if __name__ == '__main__':
     optional = parser._action_groups.pop()
     optional.add_argument('-wa', '--waves',
             help='Number of plane waves - default=5',
-            default=5, type=int, metavar="[2, 50]", choices=range(2, 151))
+            default=5, type=int, metavar="[4, 50]", choices=range(4, 151))
     optional.add_argument('-st', '--stripes',
             help='Number of stripes per wave - default=37',
             default=37, type=int, metavar="[2, 150]", choices=range(2, 151))
