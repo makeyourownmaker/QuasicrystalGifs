@@ -114,11 +114,12 @@ Quasicrystals can be thought of as the 3 dimensional generalisation of a
 
 ### How does this quasicrystal animation work?
 
-Each frame of the animation is a summation of waves at evenly-spaced 
+Each frame of the animation is a summation of four or more waves at evenly-spaced
 rotations.  That is, every point in each animation frame is colored according 
 to the sum of sines and cosines depending on the x and y coordinates.  The
 animation is determined by an evenly-spaced orientation angle between 0 and 
-2 * pi.
+2 * pi.  The number of wave cycles in the animation is determined by
+changing "stripes".  Larger numbers of stripes leads to finer structures.
 
 
 ### Examples of quasicrystals
