@@ -205,6 +205,10 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
    * Include option to indicate direction of rotation
      * Currently defaults to anti-clockwise
 
+ * Speed up saving animations:
+   * Compare speed of generating gifs with PIL
+     * Retain matplotlib colormaps if possible
+
  * Add Jupyter notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
 
@@ -236,6 +240,9 @@ short and very readable.
 
 [Mike Bostock's Javascript and WebGL implementation](https://observablehq.com/@mbostock/quasicrystals)
 is editable in the browser.
+
+[Quasicrystals on shadertoy](https://www.shadertoy.com/results?query=quasicrystal)
+by multiple authors.
 
 
 ## See Also
