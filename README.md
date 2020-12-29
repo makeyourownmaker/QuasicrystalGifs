@@ -246,6 +246,9 @@ is editable in the browser.
 describes the authors adventures searching for quasicrystals from meteorites
 in Siberia while dodging KGB agents and much more.
 
+[Quasicrystals and Geometry by Marjorie Senechal](https://www.amazon.com/Quasicrystals-Geometry-Marjorie-Senechal/dp/0521575419)
+starts with the history of crystallography and then covers methods for generating aperiodic tilings.
+
 
 ## Contributing
 
