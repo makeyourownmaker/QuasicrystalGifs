@@ -63,9 +63,16 @@ each command line option.
 
 Requires:
  * Recent version of [python 3](https://www.python.org/)
- * [numpy](https://numpy.org/)
- * [matplotlib](https://matplotlib.org/)
- * [ImageMagick](https://imagemagick.org/)
+ * [numpy](https://numpy.org/) package
+ * [matplotlib](https://matplotlib.org/) package
+ * [ImageMagick](https://imagemagick.org/) program
+
+To install the two python packages:
+```sh
+pip install -r requirements.txt
+```
+ImageMagick will also need to be installed.
+
 
 [//]: # " * [Jupyter](https://jupyter.org/) "
 [//]: # " One option is to clone the repository and open the notebook(s) in a local "
