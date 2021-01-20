@@ -196,8 +196,9 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
 
 ## Roadmap
 
- * Create requirements.txt file:
-   * Add requirements.txt usage to README
+ * Speed up saving animations:
+   * Compare speed of generating gifs with PIL
+     * Retain matplotlib colormaps if possible
 
  * quasicrystals.py:
    * Simplify handling of log-polar transformation
@@ -205,18 +206,14 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
    * Include option to indicate direction of rotation
      * Currently defaults to anti-clockwise
 
- * Speed up saving animations:
-   * Compare speed of generating gifs with PIL
-     * Retain matplotlib colormaps if possible
-
- * Add Jupyter notebook(s):
-   * Add links to run notebook(s) on NBViewer, MyBinder and Colab
-
  * Expand README:
    * Add more examples to gallery
      * List command line arguments used for each animation
    * Describe log-polar transform instead of using Cartesian coordinates
    * Describe rotational and translational symmetry of quasicrystals
+
+ * Add Jupyter notebook(s):
+   * Add links to run notebook(s) on NBViewer, MyBinder and Colab
 
 
 ## Alternatives
