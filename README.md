@@ -114,10 +114,12 @@ but they incorporate two or more unit cells into a quasiperiodic structure.
 A unit cell is the smallest group of atoms which has the overall symmetry of
 a crystal.
 Quasicrystal patterns or ordered but not periodic and can continuously
-fill all available space, but lack translational symmetry.
+fill all available space, but lack
+[translational symmetry](https://en.wikipedia.org/wiki/Translational_symmetry).
 
-Classic crystals can possess only two, three, four, and six-fold rotational
-symmetries; as seen in their diffraction patterns.
+Classic crystals can possess only two, three, four, and six-fold
+[rotational symmetries](https://en.wikipedia.org/wiki/Rotational_symmetry);
+as seen in their diffraction patterns.
 The [diffraction patterns](https://en.wikipedia.org/wiki/Diffraction) of
 quasicrystals show peaks with other symmetry orders.
 
