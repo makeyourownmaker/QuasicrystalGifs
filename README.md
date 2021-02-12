@@ -107,13 +107,19 @@ python quasicrystals.py -fn qc.gif
 
 ### What are quasicrystals?
 
-A quasicrystal, or quasiperiodic crystal, is a solid material that is 
+A quasicrystal, or quasiperiodic crystal, is a solid material that is
 intermediate between an orderly crystal and an amorphous glass.  They
-resemble crystals because they are composed of repeating structural units 
+resemble crystals because they are composed of repeating structural units
 but they incorporate two or more unit cells into a quasiperiodic structure.
-A unit cell is the smallest group of atoms which has the overall symmetry of 
-a crystal.  A quasiperiodic structure is periodic on a small scale but 
-unpredictable at some larger scale.
+A unit cell is the smallest group of atoms which has the overall symmetry of
+a crystal.
+Quasicrystal patterns or ordered but not periodic and can continuously
+fill all available space, but lack translational symmetry.
+
+Classic crystals can possess only two, three, four, and six-fold rotational
+symmetries; as seen in their diffraction patterns.
+The [diffraction patterns](https://en.wikipedia.org/wiki/Diffraction) of
+quasicrystals show peaks with other symmetry orders.
 
 Quasicrystals can be thought of as the 3 dimensional generalisation of a
 [Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling).
@@ -121,7 +127,10 @@ Quasicrystals can be thought of as the 3 dimensional generalisation of a
 
 ### How does this quasicrystal animation work?
 
-Each frame of the animation is a summation of four or more waves at evenly-spaced
+Each frame of the animation is a simulation of the diffraction pattern produced
+by the vertices of an aperiodic tiling.
+
+Each frame of the animation is a summation of five or more waves at evenly-spaced
 rotations.  That is, every point in each animation frame is colored according 
 to the sum of sines and cosines depending on the x and y coordinates.  The
 animation is determined by an evenly-spaced orientation angle between 0 and 
@@ -259,6 +268,12 @@ in Siberia while dodging KGB agents and much more.
 
 [Quasicrystals and Geometry by Marjorie Senechal](https://www.amazon.com/Quasicrystals-Geometry-Marjorie-Senechal/dp/0521575419)
 starts with the history of crystallography and then covers methods for generating aperiodic tilings.
+
+[Alan Mackay predicted quasicrystals in a 1981 paper](https://en.wikipedia.org/wiki/Alan_Lindsay_Mackay)
+
+[Quasicrystalline Medieval Islamic Architectural Tilings](https://www.peterlu.com/research/islamic_tilings)
+
+[Diffraction pattern of a penrose tiling](http://sato.issp.u-tokyo.ac.jp/ibuka/penrose.html)
 
 
 ## Contributing
