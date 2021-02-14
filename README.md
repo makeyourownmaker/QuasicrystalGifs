@@ -224,6 +224,12 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
    * Include option to indicate direction of rotation
      * Currently defaults to anti-clockwise
 
+ * Explore matplotlib [LightSource](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LightSource.html):
+   * Apply a light source coming from specified azimuth and elevation
+   * Hope this will make animations a little less planar looking
+   * [Shading example](https://matplotlib.org/stable/gallery/images_contours_and_fields/shading_example.html)
+   * [Hillshading example](https://matplotlib.org/stable/gallery/specialty_plots/advanced_hillshading.html)
+
  * Expand README:
    * Add more examples to gallery
      * List command line arguments used for each animation
