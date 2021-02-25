@@ -36,6 +36,9 @@ settings:
 
 All of the above arguments are optional.
 
+Setting the waves option to 4 or 6 will produce an animation but it will not be
+quasiperiodic.  No warning is given.
+
 A colormap is a matrix of values that define the colors for graphics objects.
 All the matplotlib colormaps are supported but I've not tested all of them.
 Here is a list of the
