@@ -157,6 +157,9 @@ Al_63 Cu_24 Fe_13 and was discovered in a meteorite by
 [Luca Bindii](https://en.wikipedia.org/wiki/Luca_Bindi) and 
 [Paul J. Steinhardt](https://en.wikipedia.org/wiki/Paul_Steinhardt).
 
+A [holmium–magnesium–zinc (Ho–Mg–Zn) quasicrystal](https://en.wikipedia.org/wiki/Holmium%E2%80%93magnesium%E2%80%93zinc_quasicrystal)
+has the shape of a regular dodecahedron, with 12 five-sided faces.
+
 Hundreds of quasicrystals have been confirmed.  They are often found in
 aluminium alloys.
 
