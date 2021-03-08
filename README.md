@@ -132,15 +132,30 @@ Quasicrystals can be thought of as the 3 dimensional generalisation of a
 
 ### How does this quasicrystal animation work?
 
-Each frame of the animation is a simulation of the diffraction pattern produced
-by the vertices of an aperiodic tiling.
-
 Each frame of the animation is a summation of five or more waves at evenly-spaced
 rotations.  That is, every point in each animation frame is colored according 
 to the sum of sines and cosines depending on the x and y coordinates.  The
 animation is determined by an evenly-spaced orientation angle between 0 and 
 2 * pi.  The number of wave cycles in the animation is determined by
 changing "stripes".  Larger numbers of stripes leads to finer structures.
+
+This method is also known as the [generalised dual method](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547).
+It is a generalisation of [de Bruijn's multigrid method](https://www.mathpages.com/home/kmath621/kmath621.htm)
+which can be used to create aperiodic tilings.
+For an n-fold rotational symmetry the multigrid consists of n sets of parallel
+lines with equidistant spacing, which are rotated against each other by
+2 * pi / n radians.
+The stripes parameter specifies the number of parallel lines in each set and
+the waves parameter specifies the rotational symmetry.
+
+The equation of the kth grid line in the jth set is:
+<img src="figures/kth_grid_line_in_jth_set.gif" alt="equation of kth grid line in jth set" border=0>
+where σ_j is an offset of the jth set of lines in the direction normal to the lines.
+
+[//]: # " x_{jk} \cos{\left( j \frac{2 \pi}{n} \right)} + y_{jk} \sin{\left( j \frac{2 \pi}{n} \right)} + \sigma_j = k "
+
+The [quasicrystals.py script](https://github.com/makeyourownmaker/QuasicrystalGifs/blob/main/quasicrystals.py)
+uses this equation to calculate values at x and y coordinates.
 
 
 ### Examples of quasicrystals
