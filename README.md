@@ -288,6 +288,11 @@ is editable in the browser.
 [Quasicrystals on shadertoy](https://www.shadertoy.com/results?query=quasicrystal)
 by multiple authors.
 
+[Program to make quasi-crystalline patterns](http://www.physics.emory.edu/faculty/weeks/software/quasic.html)
+in C from 1995.  Generates static postscript files.
+See [How to make a quasicrystal](http://www.physics.emory.edu/faculty/weeks/software/exquasi.html)
+for an explanation of quasicrystal tiling.
+
 
 ## See Also
 
