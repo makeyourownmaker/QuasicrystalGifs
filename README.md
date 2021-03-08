@@ -149,7 +149,9 @@ The stripes parameter specifies the number of parallel lines in each set and
 the waves parameter specifies the rotational symmetry.
 
 The equation of the kth grid line in the jth set is:
+<br/>
 <img src="figures/kth_grid_line_in_jth_set.gif" alt="equation of kth grid line in jth set" border=0>
+<br/>
 where σ_j is an offset of the jth set of lines in the direction normal to the lines.
 
 [//]: # " x_{jk} \cos{\left( j \frac{2 \pi}{n} \right)} + y_{jk} \sin{\left( j \frac{2 \pi}{n} \right)} + \sigma_j = k "
