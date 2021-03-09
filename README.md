@@ -5,7 +5,7 @@
 ![python
 ](https://img.shields.io/badge/python-blue.svg?style=flat)
 
-Generate animated gifs of quasicrystals using sum of plane waves with python
+Generate animated gifs of quasicrystal patterns using sum of plane waves with python
 
 If you like the quasicrystal scripts/notebooks, fork the repository and contribute or, give it a star!
 
@@ -139,8 +139,8 @@ animation is determined by an evenly-spaced orientation angle between 0 and
 2 * pi.  The number of wave cycles in the animation is determined by
 changing "stripes".  Larger numbers of stripes leads to finer structures.
 
-This method is also known as the [generalised dual method](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547).
-It is a generalisation of [de Bruijn's multigrid method](https://www.mathpages.com/home/kmath621/kmath621.htm)
+This method is known as the dual method.  It is related to
+[de Bruijn's multigrid method](https://www.mathpages.com/home/kmath621/kmath621.htm)
 which can be used to create aperiodic tilings.
 For an n-fold rotational symmetry the multigrid consists of n sets of parallel
 lines with equidistant spacing, which are rotated against each other by
@@ -158,6 +158,14 @@ where σ_j is an offset of the jth set of lines in the direction normal to the l
 
 The [quasicrystals.py script](https://github.com/makeyourownmaker/QuasicrystalGifs/blob/main/quasicrystals.py)
 uses this equation to calculate values at x and y coordinates.
+
+Note: The
+[generalised dual method](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547)
+(GDM) uses quasiperiodic grids, i.e. sets of parallel lines with spacings
+similar to the Fibonacci sequence.  It is a method for generating quasicrystals
+with any orientational symmetry and creates a wider variety of space filling
+patterns than other methods.  The GDM is **not** currently implemented in the
+quasicrystals.py script.
 
 
 ### Examples of quasicrystals
@@ -243,9 +251,18 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
 
  * quasicrystals.py:
    * Simplify handling of log-polar transformation
-   * Allow specifying width and height of images
-   * Include option to indicate direction of rotation
+   * Allow specifying both width and height of images
+   * Add generalised dual method
+     * Instead of equidistant spacing between parallel lines, use quasiperiodic grids
+     * i.e. sets of parallel lines with spacings similar to the Fibonacci sequence
+     * See [Quasicrystals with arbitrary orientational symmetry](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547)
+   * Permit defining arbitrary orientational symmetry
+     * Arbitrary angles between waves
+     * Translational order will decrease
+   * Include direction of rotation option
      * Currently defaults to anti-clockwise
+   * Consider up, down and left, right scrolling
+   * Consider zooming out animation
 
  * Explore matplotlib [LightSource](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LightSource.html):
    * Apply a light source coming from specified azimuth and elevation
@@ -310,6 +327,10 @@ starts with the history of crystallography and then covers methods for generatin
 [Quasicrystalline Medieval Islamic Architectural Tilings](https://www.peterlu.com/research/islamic_tilings)
 
 [Diffraction pattern of a penrose tiling](http://sato.issp.u-tokyo.ac.jp/ibuka/penrose.html)
+
+[Greg Egan's deBruijn Javascript applet](http://www.gregegan.net/APPLETS/12/12.html)
+
+[Eugenio Durand's QuasiTiler](http://www.geom.uiuc.edu/apps/quasitiler/about.html)
 
 
 ## Contributing
