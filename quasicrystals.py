@@ -9,6 +9,7 @@ from math import pi
 from itertools import cycle
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from matplotlib.animation import PillowWriter
 
 
 def main(args):
@@ -70,8 +71,7 @@ def main(args):
         t.daemon = True  # allow keyboard interrupts
         t.start()
 
-    anim.save(args.filename, writer='imagemagick')
-    # If writer='imagemagick' option is removed then ffmpeg is used which creates bigger gif
+    anim.save(args.filename, writer='pillow')
 
     if args.quiet is False:
         time.sleep(2)
