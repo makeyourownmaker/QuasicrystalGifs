@@ -5,7 +5,7 @@
 ![python
 ](https://img.shields.io/badge/python-blue.svg?style=flat)
 
-Generate animated gifs of quasicrystal patterns using sum of plane waves with python
+Generate animated gifs of quasicrystal patterns using sums of waves in the plane with python
 
 If you like the quasicrystal scripts/notebooks, fork the repository and contribute or, give it a star!
 
@@ -26,7 +26,7 @@ settings:
 
 | Name       | Short | Long         | Description                                     | Default   |
 |------------|-------|--------------|-------------------------------------------------|-----------|
-| Waves      | -wa   | --waves      | Number of plane waves                           | 5         |
+| Waves      | -wa   | --waves      | Number of waves in the plane                    | 5         |
 | Stripes    | -st   | --stripes    | Number of stripes (or periods) per wave         | 37        |
 | Iterations | -it   | --iterations | Number of frames in animation                   | 30        |
 | Delay      | -de   | --delay      | Number of microseconds between animation frames | 8         |
@@ -161,9 +161,9 @@ Note: The
 [generalised dual method](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547)
 (GDM) uses quasiperiodic grids, i.e. sets of parallel lines with spacings
 similar to the Fibonacci sequence.  It is a method for generating quasicrystals
-with any orientational symmetry and creates a wider variety of space filling
-patterns than other methods.  The GDM is **not** currently implemented in the
-quasicrystals.py script.
+with any orientational symmetry (distinct angles between waves) and creates
+a wider variety of space filling patterns than other methods.  The GDM is
+**not** currently implemented in the quasicrystals.py script.
 
 
 ### Examples of quasicrystals
