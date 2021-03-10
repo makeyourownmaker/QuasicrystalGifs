@@ -68,13 +68,11 @@ Requires:
  * Recent version of [python 3](https://www.python.org/)
  * [numpy](https://numpy.org/) package
  * [matplotlib](https://matplotlib.org/) package
- * [ImageMagick](https://imagemagick.org/) program
 
 To install the two python packages:
 ```sh
 pip install -r requirements.txt
 ```
-ImageMagick will also need to be installed.
 
 
 [//]: # " * [Jupyter](https://jupyter.org/) "
@@ -191,21 +189,26 @@ aluminium alloys.
 
 ## Limitations
 
-The bottleneck in generating the animated gifs is the final step using
-the [ImageMagick convert](https://imagemagick.org/script/convert.php) utility.  
-This involves a surprisingly large amount of data transfer.  See this 
+The bottleneck in generating the animated gifs is the final step, saving them.
+This involves a surprisingly large amount of data transfer.  See this
 [stackoverflow answer for more details](https://stackoverflow.com/a/30704560/100129).
-The -q or --quiet option will disable the Saving animation progress animation
+Note: the quasicrystals.py script uses
+[PillowWriter](https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.PillowWriter.html)
+instead of
+[ImageMagick](https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.animation.ImageMagickWriter.html)
+which saves a few seconds.
+
+The -q or --quiet option will disable the Saving progress animation
 and reduce runtime a little.
 
 If you start having time or memory problems converting animations to gifs
 then try using a black and white or greyscale colormap:
 ```sh
 # Short options
-python quasicrystals.py -fn qc.gif -cm binary
+python quasicrystals.py -q -fn qc.gif -cm binary
 
 # Long options
-python quasicrystals.py --filename qc.gif --colormap binary
+python quasicrystals.py --quiet --filename qc.gif --colormap binary
 ```
 Other black and white/greyscale colormaps include: binary, gist_yarg, gist_gray,
 gray and Greys.
@@ -213,10 +216,19 @@ gray and Greys.
 Reducing the resolution is also helpful:
 ```sh
 # Short options
-python quasicrystals.py -fn qc.gif -cm binary -rs 400
+python quasicrystals.py -q -fn qc.gif -cm binary -rs 400
 
 # Long options
-python quasicrystals.py --filename qc.gif --colormap binary -rs 400
+python quasicrystals.py --quiet --filename qc.gif --colormap binary -rs 400
+```
+
+Reducing the number of animation frames is also beneficial:
+```sh
+# Short options
+python quasicrystals.py -q -fn qc.gif -cm binary -rs 400 -it 20
+
+# Long options
+python quasicrystals.py --quiet --filename qc.gif --colormap binary -rs 400 --iterations 20
 ```
 
 
@@ -245,10 +257,6 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
 
 ## Roadmap
 
- * Speed up saving animations:
-   * Compare speed of generating gifs with PIL
-     * Retain matplotlib colormaps if possible
-
  * quasicrystals.py:
    * Simplify handling of log-polar transformation
    * Allow specifying both width and height of images
@@ -274,7 +282,10 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
    * Add more examples to gallery
      * List command line arguments used for each animation
    * Describe log-polar transform instead of using Cartesian coordinates
+     * Add figure
    * Describe rotational and translational symmetry of quasicrystals
+     * Add figure
+   * Add figure explaining dual method
 
  * Add Jupyter notebook(s):
    * Add links to run notebook(s) on NBViewer, MyBinder and Colab
@@ -328,9 +339,10 @@ starts with the history of crystallography and then covers methods for generatin
 
 [Diffraction pattern of a penrose tiling](http://sato.issp.u-tokyo.ac.jp/ibuka/penrose.html)
 
-[Greg Egan's deBruijn Javascript applet](http://www.gregegan.net/APPLETS/12/12.html)
+[Greg Egan's deBruijn tiler Javascript applet](http://www.gregegan.net/APPLETS/12/12.html)
 
-[Eugenio Durand's QuasiTiler](http://www.geom.uiuc.edu/apps/quasitiler/about.html)
+[Eugenio Durand's QuasiTiler from 1994](http://www.geom.uiuc.edu/apps/quasitiler/about.html)
+No source code.
 
 
 ## Contributing
