@@ -160,7 +160,10 @@ uses this equation to calculate values at x and y coordinates.
 Note: The
 [generalised dual method](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.32.5547)
 (GDM) uses quasiperiodic grids, i.e. sets of parallel lines with spacings
-similar to the Fibonacci sequence.  It is a method for generating quasicrystals
+from a
+[Fibonacci](http://mill2.chem.ucl.ac.uk/ccp/web-mirrors/weber/~weber/qc.html#2.%20The%20Concept%20of%20Higher%20Dimensional%20Space)
+[chain](http://mill2.chem.ucl.ac.uk/ccp/web-mirrors/weber/~weber/JAVA/jfibo/jfibo.html).
+It is a method for generating quasicrystals
 with any orientational symmetry (distinct angles between waves) and creates
 a wider variety of space filling patterns than other methods.  The GDM is
 **not** currently implemented in the quasicrystals.py script.
