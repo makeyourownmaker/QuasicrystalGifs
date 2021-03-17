@@ -21,8 +21,8 @@ Here is the generated gif:
 
 <img src="figures/qc.gif" align="center" />
 
-The above command will generate an animated gif called qc.gif with the following default
-settings:
+The above command will generate an animated gif called qc.gif with the
+following default main settings:
 
 | Name       | Short | Long         | Description                                     | Default   |
 |------------|-------|--------------|-------------------------------------------------|-----------|
@@ -34,6 +34,14 @@ settings:
 | Colormap   | -cm   | --colormap   | Colormap from matplotlib                        | PiYG      |
 | Log-polar  | -lp   | --log_polar  | Use log-polar coordinates instead of Cartesian  | Cartesian |
 
+And with the following default light source illumination settings:
+| Name                  | Short | Long         | Description                                                                                          | Default |
+|-----------------------|-------|--------------|------------------------------------------------------------------------------------------------------|---------|
+| Blend mode            | -bm   | --blend_mode | Blend mode for light source - one of {soft, overlay, hsv}                                            | None    |
+| Azimuth               | -az   | --azimuth    | Azimuth for light source measured clockwise from north in degrees                                    | 0       |
+| Elevation             | -el   | --elevation  | Elevation for light source measured up from zero plane of the surface in degrees                     | 90      |
+| Vertical exaggeration | -ve   | --vert_exag  | Ammount to exaggerate or de-emphasize elevation values by when calculating light source illumination | 1       |
+
 All of the above arguments are optional.
 
 Setting the waves option to 4 or 6 will produce an animation but it will not be
@@ -42,7 +50,13 @@ quasiperiodic.  No warning is given.
 A colormap is a matrix of values that define the colors for graphics objects.
 All the matplotlib colormaps are supported but I've not tested all of them.
 Here is a list of the
-[matplotlib version 3.3.3 colormaps](https://matplotlib.org/3.3.3/tutorials/colors/colormaps.html).
+[matplotlib colormaps](https://matplotlib.org/stable/tutorials/colors/colormaps.html).
+
+Here is the
+[matplotlib light source documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LightSource.html).
+It's possible to de-emphasize and lose the rotational symmetry when adjusting
+the light source settings.  The default azimuth and elevation settings specify
+a light source directly above the plot.
 
 The only required argument is -fn or --filename.
 
@@ -275,14 +289,9 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
    * Consider up, down and left, right scrolling
    * Consider zooming out animation
 
- * Explore matplotlib [LightSource](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LightSource.html):
-   * Apply a light source coming from specified azimuth and elevation
-   * Hope this will make animations a little less planar looking
-   * [Shading example](https://matplotlib.org/stable/gallery/images_contours_and_fields/shading_example.html)
-   * [Hillshading example](https://matplotlib.org/stable/gallery/specialty_plots/advanced_hillshading.html)
-
  * Expand README:
    * Add more examples to gallery
+     * Particularly light source illumination examples
      * List command line arguments used for each animation
    * Describe log-polar transform instead of using Cartesian coordinates
      * Add figure
