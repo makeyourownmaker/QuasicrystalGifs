@@ -9,6 +9,7 @@ from math import pi
 from itertools import cycle
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from matplotlib.colors import LightSource
 from matplotlib.animation import PillowWriter
 
 
@@ -44,11 +45,26 @@ def main(args):
     cinner = np.cos(inner)
     sinner = np.sin(inner)
 
-    plt.imshow(image, cmap=args.colormap)
+    # Illuminate the scene from azimuth and elevation
+    ls = LightSource(azdeg=args.azimuth, altdeg=args.elevation)
+
+    def get_rgb(image, ls, args):
+
+        if args.blend_mode is not None:
+            rgb = ls.shade(image, cmap=plt.get_cmap(args.colormap),
+                           vert_exag=args.vert_exag, blend_mode=args.blend_mode)
+        else:
+            rgb = image
+
+        return rgb
+
+    rgb = get_rgb(image, ls, args)
+    plt.imshow(rgb, cmap=args.colormap)
 
     def animate_func(i):
         image[:] = np.sum(cinner * np.cos(phases[i]) - sinner * np.sin(phases[i]), axis=0) + k
-        im = plt.imshow(image, cmap=args.colormap)
+        rgb = get_rgb(image, ls, args)
+        im = plt.imshow(rgb, cmap=args.colormap)
         return [im]
 
     anim = animation.FuncAnimation(fig,
@@ -92,29 +108,45 @@ if __name__ == '__main__':
 
     optional = parser._action_groups.pop()
     optional.add_argument('-wa', '--waves',
-            help='Number of plane waves - default=5',
+            help='Number of plane waves - default=%(default)s',
             default=5, type=int, metavar="[4, 50]", choices=range(4, 151))
     optional.add_argument('-st', '--stripes',
-            help='Number of stripes per wave - default=37',
+            help='Number of stripes per wave - default=%(default)s',
             default=37, type=int, metavar="[2, 150]", choices=range(2, 151))
     optional.add_argument('-rs', '--resolution',
-            help='Image size in pixels - default=512',
+            help='Image size in pixels - default=%(default)s',
             default=512, type=int, metavar="[64, 4096]", choices=range(64, 4096))
     optional.add_argument('-it', '--iterations',
-            help='Number of frames in animation - default=30',
+            help='Number of frames in animation - default=%(default)s',
             default=30, type=int, metavar="[1, 120]", choices=range(1, 120))
     optional.add_argument('-de', '--delay',
-            help='Number of microseconds between animation frames - default=8',
+            help='Number of microseconds between animation frames - default=%(default)s',
             default=8, type=int, metavar="[1, 100]", choices=range(1, 100))
     optional.add_argument('-lp', '--log_polar',
-            help='Turn on log-polar transform - default=off',
+            help='Turn on log-polar transform - default=%(default)s',
             default=False, action='store_true')
     optional.add_argument('-cm', '--colormap',
-            help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=PiYG',
+            help='Matplotlib colormap See https://bit.ly/2WyFI4f - default=%(default)s',
             default='PiYG', type=str,
             choices=plt.colormaps())
+
+    optional.add_argument('-bm', '--blend_mode',
+            help="Blend mode for light source - default=%(default)s  For most topographic surfaces, 'overlay' or 'soft' appear more visually realistic.",
+            default=None, type=str,
+            choices=['hsv', 'overlay', 'soft'])
+    optional.add_argument('-az', '--azimuth',
+            help='Azimuth for light source measured clockwise from north in degrees - default=%(default)s',
+            default=0, type=int, metavar="[0, 360]", choices=range(0, 361))
+    optional.add_argument('-el', '--elevation',
+            help='Elevation for light source measured up from zero plane of the surface in degrees - default=%(default)s',
+            default=90, type=int, metavar="[0, 90]", choices=range(0, 91))
+    optional.add_argument('-ve', '--vert_exag',
+            help='Amount to exaggerate or de-emphasize elevation values by when calculating light source illumination - default=%(default)s',
+            default=1, type=int, metavar="[0, 10]", choices=range(1, 11))
+    # NOTE vertical exaggeration of 10 is an arbitrary upper bound
+
     optional.add_argument('-q', '--quiet',
-            help='Turn off messages - default=on',
+            help='Turn off messages - default=%(default)s',
             default=False, action='store_true')
 
     parser._action_groups.append(optional)
