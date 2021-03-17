@@ -271,6 +271,16 @@ python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_
 ```
 <img src="figures/wa_7_st_128_rs_800_cm_hsv.gif" align="center" />
 
+```sh
+python quasicrystals.py -fn qc_gray.gif -cm gray
+```
+<img src="figures/qc_gray.gif" align="center" />
+
+```sh
+python quasicrystals.py -fn qc_ls_hsv_gray.gif -cm gray -bm hsv
+```
+<img src="figures/qc_ls_hsv_gray.gif" align="center" />
+
 You can also browse through the gifs in the
 [figures directory](https://github.com/makeyourownmaker/QuasicrystalGifs/tree/main/figures).
 
