@@ -369,6 +369,10 @@ starts with the history of crystallography and then covers methods for generatin
 [Eugenio Durand's QuasiTiler from 1994](http://www.geom.uiuc.edu/apps/quasitiler/about.html)
 No source code.
 
+de Bruijn's original Penrose tiling papers:
+ * de Bruijn, N.G. (1981). "Algebraic theory of Penrose's non-periodic tilings of the plane. I". Indagationes Mathematicae (Proceedings). 84: 39–52. [doi:10.1016/1385-7258(81)90016-0](https://doi.org/10.1016%2F1385-7258%2881%2990016-0).
+ * de Bruijn, N.G. (1981). "Algebraic theory of Penrose's non-periodic tilings of the plane. II". Indagationes Mathematicae (Proceedings). 84: 53–66. [doi:10.1016/1385-7258(81)90017-2](https://doi.org/10.1016%2F1385-7258%2881%2990017-2).
+
 
 ## Contributing
 
