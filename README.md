@@ -236,7 +236,7 @@ Reducing the resolution is also helpful:
 python quasicrystals.py -q -fn qc.gif -cm binary -rs 400
 
 # Long options
-python quasicrystals.py --quiet --filename qc.gif --colormap binary -rs 400
+python quasicrystals.py --quiet --filename qc.gif --colormap binary --resolution 400
 ```
 
 Reducing the number of animation frames is also beneficial:
@@ -245,7 +245,7 @@ Reducing the number of animation frames is also beneficial:
 python quasicrystals.py -q -fn qc.gif -cm binary -rs 400 -it 20
 
 # Long options
-python quasicrystals.py --quiet --filename qc.gif --colormap binary -rs 400 --iterations 20
+python quasicrystals.py --quiet --filename qc.gif --colormap binary --resolution 400 --iterations 20
 ```
 
 
