@@ -263,21 +263,29 @@ python quasicrystals.py --filename qc.gif --log_polar
 
 ```sh
 python quasicrystals.py -wa 7 -st 128 -rs 800 -cm spectral -fn wa_7_st_128_rs_800_cm_spectral.gif
+
+python quasicrystals.py --waves 7 --stripes 128 --resolution 800 --colormap spectral --filename wa_7_st_128_rs_800_cm_spectral.gif
 ```
 <img src="figures/wa_7_st_128_rs_800_cm_spectral.gif" align="center" />
 
 ```sh
 python quasicrystals.py -wa 7 -st 128 -rs 800 -cm hsv -fn wa_7_st_128_rs_800_cm_hsv.gif
+
+python quasicrystals.py --waves 7 --stripes 128 --resolution 800 --colormap hsv --filename wa_7_st_128_rs_800_cm_hsv.gif
 ```
 <img src="figures/wa_7_st_128_rs_800_cm_hsv.gif" align="center" />
 
 ```sh
 python quasicrystals.py -fn qc_gray.gif -cm gray
+
+python quasicrystals.py --filename qc_gray.gif --colormap gray
 ```
 <img src="figures/qc_gray.gif" align="center" />
 
 ```sh
 python quasicrystals.py -fn qc_ls_hsv_gray.gif -cm gray -bm hsv
+
+python quasicrystals.py --filename qc_ls_hsv_gray.gif --colormap gray --blend_mode hsv
 ```
 <img src="figures/qc_ls_hsv_gray.gif" align="center" />
 
