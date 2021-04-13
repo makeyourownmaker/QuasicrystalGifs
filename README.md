@@ -14,7 +14,7 @@ If you like the quasicrystal scripts/notebooks, fork the repository and contribu
 
 Assuming you have python in your path and all dependencies installed:
 ```sh
-python quasicrystals.py -fn qc.fig
+python quasicrystals.py -fn qc.gif
 ```
 
 Here is the generated gif:
