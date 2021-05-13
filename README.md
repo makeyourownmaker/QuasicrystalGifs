@@ -333,6 +333,12 @@ is the earliest implementation I've been able to find.  In Haskell.
 This time in Java.  Requires post-processing with the convert tool from 
 ImageMagick to produce animated gifs.  Code is readable but not vectorised.
 
+[Quasiperiodic designs by Peter Stampfli](https://geometricolor.wordpress.com/tag/quasiperiodic-design/).
+Including [quasiperiodic designs from superposition of waves from 2012](https://geometricolor.wordpress.com/2012/09/14/quasiperiodic-designs-from-superposition-of-waves/)
+Also, [http://geometricolor.ch/](http://geometricolor.ch/)
+which is a
+[browser app for creating quasiperiodic wallpapers](https://geometricolor.wordpress.com/2019/04/04/waves-a-browser-app-for-creating-quasiperiodic-wallpapers/).
+
 [Andrew Horchler's Matlab implementation](https://github.com/horchler/quasicrystal)
 will produce animated gifs or movies.
 
