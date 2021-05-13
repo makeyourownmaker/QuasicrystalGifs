@@ -338,6 +338,7 @@ Including [quasiperiodic designs from superposition of waves from 2012](https://
 Also, [http://geometricolor.ch/](http://geometricolor.ch/)
 which is a
 [browser app for creating quasiperiodic wallpapers](https://geometricolor.wordpress.com/2019/04/04/waves-a-browser-app-for-creating-quasiperiodic-wallpapers/).
+[https://github.com/PeterStampfli/images](https://github.com/PeterStampfli/images)
 
 [Andrew Horchler's Matlab implementation](https://github.com/horchler/quasicrystal)
 will produce animated gifs or movies.
