@@ -206,6 +206,9 @@ aluminium alloys.
 
 ## Limitations
 
+These quasicrystal patterns don't have well defined lattice points, so
+are not exactly quasicrystals.
+
 The bottleneck in generating the animated gifs is the final step, saving them.
 This involves a surprisingly large amount of data transfer.  See this
 [stackoverflow answer for more details](https://stackoverflow.com/a/30704560/100129).
