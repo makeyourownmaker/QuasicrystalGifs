@@ -364,6 +364,9 @@ in C from 1995.  Generates static postscript files.
 See [How to make a quasicrystal](http://www.physics.emory.edu/faculty/weeks/software/exquasi.html)
 for an explanation of quasicrystal tiling.
 
+[Processing and OpenSCAD code to generate 3D quasicrystal solids](https://github.com/headrotor/quasi3D)
+[3D printed results and tutorial](https://www.instructables.com/3D-Printing-Quasicrystal-Shapes/)
+
 
 ## See Also
 
