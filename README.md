@@ -335,6 +335,8 @@ is the earliest implementation I've been able to find.  In Haskell.
 [Another early implementation](http://wealoneonearth.blogspot.com/search/label/quasicrystal).
 This time in Java.  Requires post-processing with the convert tool from 
 ImageMagick to produce animated gifs.  Code is readable but not vectorised.
+[Additional code](https://github.com/michaelerule/quasicrystal).
+[More recent work](https://crawlingrobotfortress.blogspot.com/search/label/quasicrystal).
 
 [Quasiperiodic designs by Peter Stampfli](https://geometricolor.wordpress.com/tag/quasiperiodic-design/).
 Including [quasiperiodic designs from superposition of waves from 2012](https://geometricolor.wordpress.com/2012/09/14/quasiperiodic-designs-from-superposition-of-waves/)
