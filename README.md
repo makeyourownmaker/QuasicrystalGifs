@@ -305,57 +305,57 @@ stripes (2 to 12 in steps of 2) look like:
 <table summary='' cellspacing='1' cellpadding='1' border='0' align='center'>
           <tr>
               <td>st = 2</td>
-              <td><img src='figures/wa_4_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_2_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td>st = 4</td>
-              <td><img src='figures/wa_4_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_4_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_4_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td>st = 6</td>
-              <td><img src='figures/wa_4_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_6_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_6_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td>st = 8</td>
-              <td><img src='figures/wa_4_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_8_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_8_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td>st = 10</td>
-              <td><img src='figures/wa_4_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_10_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_10_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td>st = 12</td>
-              <td><img src='figures/wa_4_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_6_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_8_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_10_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_12_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
-              <td><img src='figures/wa_14_st_12_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
+              <td><img src='figures/wa_4_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_6_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_8_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_10_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_12_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
+              <td><img src='figures/wa_14_st_12_rs_128_cm_binary.gif' width=96 border=0 alt=''></td>
           </tr>
           <tr>
               <td></td>
