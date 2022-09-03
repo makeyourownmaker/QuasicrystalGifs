@@ -302,7 +302,7 @@ You can also browse through the gifs in the
 This table shows what combinations of waves (4 to 14 in steps of 2) and
 stripes (2 to 12 in steps of 2) look like:
 
-      <table summary='' cellspacing='1' cellpadding='1' border='0' align='center'>
+<table summary='' cellspacing='1' cellpadding='1' border='0' align='center'>
           <tr>
               <td>st = 2</td>
               <td><img src='figures/wa_4_st_2_rs_128_cm_binary.gif' width=128 border=0 alt=''></td>
@@ -366,7 +366,7 @@ stripes (2 to 12 in steps of 2) look like:
               <td>wa = 12</td>
               <td>wa = 14</td>
           </tr>
-      </table>
+</table>
 
 
 ## Roadmap
