@@ -159,7 +159,7 @@ lines with equidistant spacing, which are rotated against each other by
 2 * pi / n radians.
 The stripes parameter specifies the number of parallel lines in each set and
 the waves parameter specifies the rotational symmetry.
-The quasiperiodic table of waves and stripes below shows some examples.
+The quasiperiodic table of waves and stripes below shows some static examples.
 
 The equation of the kth grid line in the jth set is:
 <br/>
@@ -299,8 +299,8 @@ You can also browse through the gifs in the
 
 ## Quasiperiodic table of waves and stripes
 
-This table shows what combinations of waves (4 to 14 in steps of 2) and
-stripes (2 to 12 in steps of 2) look like:
+This table shows what combinations of waves (wa from 4 to 14 in steps of 2) and
+stripes (st from 2 to 12 in steps of 2) look like:
 
 <table summary='' cellspacing='1' cellpadding='1' border='0' align='center'>
           <tr>
